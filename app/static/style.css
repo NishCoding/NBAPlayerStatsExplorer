@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the NBA Player Trends Title */
+/* Styling the NBA Player Trends Title */
+#nba-trends-title {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style for the NBA logo */
+.nba-logo {
+    width: 40px;  /* Adjust size as needed */
+    height: 40px;
+    margin-right: 30px; /* Increased margin to move the logo further left */
+}
+
+/* Flexbox for spacing the letters */
+/* Flexbox for spacing the letters uniformly */
+.nba {
+    display: flex;
+    align-items: center;
+    gap: 5px;  /* Ensures equal spacing */
+    justify-content: center;
+}
+
+/* Ensures all letters in NBA have the same size & alignment */
+.nba-letter {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white; /* Default color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Ensures equal spacing & alignment */
+    height: 40px;
+    line-height: 40px;
+}
+
+/* Continuous Alternating Colors for NBA */
+.nba-letter:nth-child(1) { animation: colorChange 0.5s infinite alternate; }  /* N */
+.nba-letter:nth-child(2) { animation: colorChange 0.5s infinite alternate 0.25s; }  /* B */
+.nba-letter:nth-child(3) { animation: colorChange 0.5s infinite alternate 0.5s; }  /* A */
+
+@keyframes colorChange {
+    0% { color: red; }
+    50% { color: white; }
+    100% { color: blue; }
+}
+
+
+
+/* Container Styling */
+.container {
+    width: 50%;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+/* Animated Heading */
+.animated-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* NBA Logo */
+.animated-title img {
+    height: 50px;
+}
+
+/* Continuous Alternating Colors for NBA */
+.animated-title span {
+    animation: colorChange 0.5s infinite alternate;
+}
+
+.animated-title span:nth-child(1) { animation-delay: 0s; }  /* N */
+.animated-title span:nth-child(2) { animation-delay: 0.25s; }  /* B */
+.animated-title span:nth-child(3) { animation-delay: 0.5s; }  /* A */
+
+@keyframes colorChange {
+    0% { color: red; }
+    50% { color: white; }
+    100% { color: blue; }
+}
+
+/* Search Bar */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="text"]::placeholder {
+    color: #bbb;
+}
+
+input[type="text"]:focus {
+    border-color: orange;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Suggestions Dropdown */
+#suggestions {
+    position: absolute;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    margin-top: 5px;
+    left: 10%;
+}
+
+.suggestion {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    transition: background 0.3s ease-in-out;
+}
+
+.suggestion:hover {
+    background: #ff4500;
+    color: white;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid white;
+    font-size: 14px;
+}
+
+th {
+    background: orange;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar {
+    background: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: orange;
+}

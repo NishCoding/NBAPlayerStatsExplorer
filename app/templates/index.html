@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Player Stats Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">🏠 Home</a></li>
+            <li><a href="/player_trends_page">📈 Player Trends</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="animated-title">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGWb0YVnMz8gJpw7UtiG21fp_NL3HIY2h82A&s" alt="NBA Logo">
+            <span>N</span><span>B</span><span>A</span> Player Stats Explorer
+        </h1>
+        <p class="subtext">Stats are from the NBA 2024-2025 Regular Season till 7th February EST</p>
+
+        <input type="text" id="playerSearch" placeholder="Search for a player..." autocomplete="off">
+        <div id="suggestions"></div>
+
+        <div id="stats"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

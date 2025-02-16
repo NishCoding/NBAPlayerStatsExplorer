@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stat Trends</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">🏠 Home</a></li>
+            <li><a href="/player_trends_page">📈 Player Trends</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="animated-title">
+            <span class="nba-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGWb0YVnMz8gJpw7UtiG21fp_NL3HIY2h82A&s" alt="NBA Logo">
+            </span>
+            <span class="nba">N B A</span> Player Trends
+        </h1>
+
+        <input type="text" id="playerSearch" placeholder="Enter player name..." autocomplete="off">
+        <div id="suggestions"></div>
+        <button onclick="fetchPlayerTrends()">Show Trends</button>
+
+        <!-- Static Graph -->
+        <div style="height: 400px; width: 100%; overflow: hidden;">
+            <canvas id="playerChart" style="height: 100%; width: 100%;"></canvas>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='trends.js') }}"></script>
+</body>
+</html>
